@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Список студентов</title>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div class="container flex">
+    <div class="wrapper-form">
+      <form class="form flex" id="formStudents">
+        <label class="form__label">
+          <span class="form__label-text">
+            Фамилия
+          </span>
+          <input class="form__input form__input_full" name="surname" id="surname" type="text" required>
+        </label>
+
+        <div class="form__wrapper">
+          <label class="form__label">
+            <span class="form__label-text">
+              Имя
+            </span>
+            <input class="form__input" name="lastName" id="lastName" type="text" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">
+              Отчество
+            </span>
+            <input class="form__input" name="patronymic" id="patronymic" type="text" required>
+          </label>
+        </div>
+
+        <div class="form__wrapper">
+          <label class="form__label">
+            <span class="form__label-text">
+              Дата рождения
+            </span>
+            <input class="form__input" name="dateBirth" id="dateBirth" type="date" min="1900-01-01" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">
+              Год начала обучения
+            </span>
+            <input class="form__input" name="year" id="year" type="number" min="2000" required>
+          </label>
+        </div>
+
+        <label class="form__label">
+          <span class="form__label-text">
+            Факультет
+          </span>
+          <input class="form__input form__input_full" name="faculty" id="faculty" type="text" required>
+        </label>
+        <button class="form__button" type="submit">
+          Добавить
+        </button>
+        <div class="wrapper-errors">
+        </div>
+      </form>
+    </div>
+    <div class="wrapper-list">
+      <input class="search__input" type="text" name="search" id="search">
+      <div class="wrapper-radio">
+        <label class="radio">
+          <input class="radio__input" type="radio" name="radio" id="radioName" checked>
+          <span class="radio__box"></span>
+          <span class="radio__text">
+            Ф.И.О.
+          </span>
+        </label>
+        <label class="radio">
+          <input class="radio__input" type="radio" name="radio" id="radioFaculty">
+          <span class="radio__box"></span>
+          <span class="radio__text">
+            Факультет
+          </span>
+        </label>
+        <label class="radio">
+          <input class="radio__input" type="radio" name="radio" id="radioStart">
+          <span class="radio__box"></span>
+          <span class="radio__text">
+            Год начала обучения
+          </span>
+        </label>
+        <label class="radio">
+          <input class="radio__input" type="radio" name="radio" id="radioEnd">
+          <span class="radio__box"></span>
+          <span class="radio__text">
+            Год окончания обучения
+          </span>
+        </label>
+      </div>
+      <ul class="list list-reset flex">
+        <li class="item item_heading">
+          <span class="item__text item__text_heading item__text_name">
+            <button class="item__button" id="sort-name">
+              Ф.И.О
+            </button>
+          </span>
+          <span class="item__text item__text_heading item__text_faculty">
+            <button class="item__button" id="sort-faculty">
+              Факультет
+            </button>
+          </span>
+          <span class="item__text item__text_heading item__text_date">
+            <button class="item__button" id="sort-date">
+              Дата рождения (возраст)
+            </button>
+          </span>
+          <span class="item__text item__text_heading item__text_years">
+            <button class="item__button" id="sort-years">
+              Годы обучения
+            </button>
+          </span>
+          <span class="item__text item__text_heading item__text_del">
+            Del
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
